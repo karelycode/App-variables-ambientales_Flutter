@@ -29,15 +29,15 @@ class _MyGraphics extends State<Graphics> {
   }).toList();
   setState
 }
-@Override
-Widget build(BuildContext context){
-  return Scaffold(
-    appBar: AppBar(
-      backgroundColor: Theme.of.context,
-    ),
-  )
-}
-}
+  @Override
+    Widget build(BuildContext context){
+      return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Theme.of.context,
+        ),
+      );
+    }
+  }
 }
 
 
