@@ -13,7 +13,7 @@ class CSVScreen2 extends StatelessWidget {
     QuerySnapshot querySnapshot = await FirebaseFirestore.instance.collection('variablesTH').get();
 
     List<List<dynamic>> csvData = [];
-    csvData.add(['Fecha', 'Humedad', 'Temperatura']); // Cambia los nombres de los campos según tu colección
+    csvData.add(['fecha', 'humedad', 'temperatura']); // Cambia los nombres de los campos según tu colección
     querySnapshot.docs.forEach((doc) {
       csvData.add([doc['fecha'], doc['humedad'], doc['temperatura']]);
     });
@@ -50,13 +50,14 @@ class CSVScreen2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Enviar datos por correo electrónico'),
+        title: Text('Correo electrónico'),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: exportDataToCSV,
-          child: Text('Enviar por correo electrónico'),
-        ),
+        child:
+          ElevatedButton(
+            onPressed: exportDataToCSV,
+            child: Text('Enviar datos por correo electrónico'),
+          ),
       ),
     );
   }
