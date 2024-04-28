@@ -63,6 +63,6 @@ class DefaultFirebaseOptions {
     messagingSenderId: '494365497039',
     projectId: 'appproyecto-d6340',
     storageBucket: 'appproyecto-d6340.appspot.com',
-    iosBundleId: 'com.example.segundaapp',
+    iosBundleId: 'com.example.varambientales',
   );
 }
